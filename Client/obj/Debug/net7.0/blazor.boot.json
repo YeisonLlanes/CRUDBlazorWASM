@@ -198,15 +198,15 @@
       "mscorlib.dll": "sha256-X+o60j6cZnlI2vFFjdH81yYTAxx13\/wqnNSWTKbDsyw=",
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
-      "CRUDBlazorWASM.Shared.dll": "sha256-ET7R5aG7bNi\/kZtJS\/pt6i5akMSpTsSAJcCS5ArbqoQ=",
-      "CRUDBlazorWASM.Client.dll": "sha256-rimcb+GwmVYWqdS8dwD8v5CXw39SrCqp+JSWs+WiRmM="
+      "CRUDBlazorWASM.Shared.dll": "sha256-lCyP0Pg9MzMM+Xi5boJikwQ45rFlH9gR2dCx7I2\/nUc=",
+      "CRUDBlazorWASM.Client.dll": "sha256-Y7H68nYeb44KARevnDCSYOu7ksp1+uZwT60masztatQ="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "CRUDBlazorWASM.Shared.pdb": "sha256-S\/sbHXSTuD3g+13ro8RAfxl+MNYWz+QIDWwgpK117Y8=",
-      "CRUDBlazorWASM.Client.pdb": "sha256-Tj1qdkMrNzAnH9SNKtivvWHJ5rKKki9usbt0o9kbuT0="
+      "CRUDBlazorWASM.Shared.pdb": "sha256-7AspmwJn1+eRJlmd3K+9skc2ONqVZlOwtguJszG2EVA=",
+      "CRUDBlazorWASM.Client.pdb": "sha256-5VqVaTqor1uEO\/WtjCJTQlPztJ4dnmf+FkfmQrM6zwI="
     },
     "runtime": {
       "dotnet.7.0.11.i1e8avrfnb.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",

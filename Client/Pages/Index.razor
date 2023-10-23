@@ -1,9 +1,62 @@
 ﻿@page "/"
+@using CRUDBlazorWASM.Shared;
+@inject HttpClient Http;
 
-<PageTitle>Index</PageTitle>
+<h1>Lista De Usuarios</h1>
 
-<h1>Hello, world!</h1>
+<div class="row">
+    <div class="col-md-6">
+        <a href="/usuario/nuevo" class="btn btn-primary" role="button">
+            <i class="fas fas-user-plus"></i>
+            Nuevo Usuario    
+        </a>
+    </div>
+</div>
 
-Welcome to your new app.
+@if (lista == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="card">
+    <table class="table table-striped align-middle table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var l in lista)
+            {
+            <tr>
+                <td>@l.IdUsuario</td>
+                <td>@l.Nombre</td>
+                <td>@l.Apellido</td>
+                <td>@l.Telefono</td>
+                <td>@l.Email</td>
+                <td>
+                    <a href="usuario/edit/@l.Email" class="btn btn-secondary" role="button">Editar</a>
+                    <a href="usuario/eliminar/@l.Email" class="btn btn-danger" role="button">Borrar</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+}
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code
+{
+    private List<Usuario> lista;
+
+    protected override async Task OnInitializedAsync()
+    {
+        lista = await Http.GetFromJsonAsync<List<Usuario>>("api/Usuario");
+    }
+}

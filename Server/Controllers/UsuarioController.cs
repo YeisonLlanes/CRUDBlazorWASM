@@ -24,5 +24,11 @@ namespace CRUDBlazorWASM.Server.Controllers
             //return Ok(await _usuarioService.DatosUsuarios());
             return await _usuarioService.DatosUsuarios();
         }
+
+        [HttpPost]
+        public async Task CreateUser(Usuario usuario)
+        {
+            await _usuarioService.NuevoUsuario(usuario);
+        }
     }
 }

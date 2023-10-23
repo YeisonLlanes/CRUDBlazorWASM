@@ -42,7 +42,16 @@ namespace CRUDBlazorWASM.Server.Services
 
         public async Task NuevoUsuario(Usuario u)
         {
-            throw new NotImplementedException();
+            try
+            {
+                u.FechaIngreso = DateTime.Now;
+                await _dbcontext.Usuarios.AddAsync(u);
+                await _dbcontext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
         }
     }
 }
