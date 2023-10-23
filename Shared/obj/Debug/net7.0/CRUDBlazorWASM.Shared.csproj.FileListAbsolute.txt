@@ -1,0 +1,11 @@
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\bin\Debug\net7.0\CRUDBlazorWASM.Shared.deps.json
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\bin\Debug\net7.0\CRUDBlazorWASM.Shared.dll
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\bin\Debug\net7.0\CRUDBlazorWASM.Shared.pdb
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\obj\Debug\net7.0\CRUDBlazorWASM.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\obj\Debug\net7.0\CRUDBlazorWASM.Shared.AssemblyInfoInputs.cache
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\obj\Debug\net7.0\CRUDBlazorWASM.Shared.AssemblyInfo.cs
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\obj\Debug\net7.0\CRUDBlazorWASM.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\obj\Debug\net7.0\CRUDBlazorWASM.Shared.dll
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\obj\Debug\net7.0\refint\CRUDBlazorWASM.Shared.dll
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\obj\Debug\net7.0\CRUDBlazorWASM.Shared.pdb
+C:\Users\Jay\Documents\Proyectos_Desarrollo\Microsoft_Learn\BlazorApss\PrimerAppBalzor\CRUDBlazorWASM\Shared\obj\Debug\net7.0\ref\CRUDBlazorWASM.Shared.dll
