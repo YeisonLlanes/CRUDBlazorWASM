@@ -27,17 +27,22 @@ namespace CRUDBlazorWASM.Server.Services
 
         public async Task<Usuario> DatosUsuario(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public async Task ActualizarUsuario(IUsuario u)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task BorrarUsuario(int id)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                Usuario? u = await _dbcontext.Usuarios.FindAsync(id);
+                if(u != null)
+                {
+                    return u;
+                }
+                else
+                {
+                    throw new ArgumentNullException();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
         }
 
         public async Task NuevoUsuario(Usuario u)
@@ -53,5 +58,56 @@ namespace CRUDBlazorWASM.Server.Services
                 throw new Exception(ex.ToString());
             }
         }
+
+        public async Task ActualizarUsuario(Usuario u)
+        {
+            try
+            {
+                Usuario? us = await _dbcontext.Usuarios.FindAsync(u.IdUsuario);
+                if (us != null)
+                {
+                    us.Nombre = u.Nombre;
+                    us.Apellido = u.Apellido;
+                    us.Telefono = u.Telefono;
+                    us.Email = u.Email;
+
+                    _dbcontext.ChangeTracker.Clear();//--> Opcion sustituye AsNoTRacking() con EF, limpia el objeto que esta siendo tracking(Validar mejor opcion)
+                    _dbcontext.Entry(us).State = EntityState.Modified;
+                    await _dbcontext.SaveChangesAsync();
+                }
+                else
+                {
+                    throw new ArgumentNullException();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        public async Task BorrarUsuario(int id)
+        {
+            try
+            {
+                Usuario? u = await _dbcontext.Usuarios.FindAsync(id);
+                if (u != null)
+                {
+                    _dbcontext.ChangeTracker.Clear();
+                    _dbcontext.Usuarios.Remove(u);
+                    await _dbcontext.SaveChangesAsync();
+                }
+                else
+                {
+                    throw new ArgumentNullException();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        
     }
 }

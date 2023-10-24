@@ -8,7 +8,7 @@ namespace CRUDBlazorWASM.Server.Services
 
         Task NuevoUsuario(Usuario u);
 
-        Task ActualizarUsuario(IUsuario u);
+        Task ActualizarUsuario(Usuario u);
 
         Task<Usuario> DatosUsuario(int id);
 

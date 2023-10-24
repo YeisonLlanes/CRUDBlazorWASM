@@ -1,4 +1,6 @@
 ﻿@page "/usuario/nuevo"
+@page "/usuario/editar/{IdUsuario:int}"
+
 @using CRUDBlazorWASM.Shared
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
@@ -51,14 +53,26 @@
 
 @code 
 {
+    [Parameter]
+    public int IdUsuario { get; set; }
     protected string Titulo = "Nuevo";
     protected Usuario usuario = new();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (IdUsuario != 0)
+        {
+            Titulo = "Editar";
+            usuario = await Http.GetFromJsonAsync<Usuario>("api/Usuario/" + IdUsuario.ToString());
+        }
+    }
+
 
     protected async Task GuardarUsuario()
     {
         if(usuario.IdUsuario != 0)
         {
-
+            await Http.PutAsJsonAsync("api/Usuario", usuario);
         }
         else
         {

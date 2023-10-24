@@ -2,6 +2,7 @@
 using CRUDBlazorWASM.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace CRUDBlazorWASM.Server.Controllers
 {
@@ -25,10 +26,39 @@ namespace CRUDBlazorWASM.Server.Controllers
             return await _usuarioService.DatosUsuarios();
         }
 
+        [HttpGet("{id}")]
+        public async Task <IActionResult> ObtenerUsuario(int id)
+        {
+            Usuario u = await _usuarioService.DatosUsuario(id);
+            if(u != null)
+            {
+                return Ok(u);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
         [HttpPost]
         public async Task CreateUser(Usuario usuario)
         {
             await _usuarioService.NuevoUsuario(usuario);
         }
+
+        [HttpPut]
+        public async Task UpdateUser(Usuario usuario)
+        {
+            await _usuarioService.ActualizarUsuario(usuario);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task <IActionResult> DeleteUSer(int id)
+        {
+            await _usuarioService.BorrarUsuario(id);
+            return Ok();
+        }
+
+
     }
 }
